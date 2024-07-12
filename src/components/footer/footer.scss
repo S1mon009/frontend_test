@@ -1,0 +1,128 @@
+@import "../../scss/colors";
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 5rem;
+  padding: 1rem 1.875rem;
+  background: $footer-background-color;
+
+  .css-is-awesome {
+    position: relative;
+    width: 4.1rem;
+    padding: 0.5rem;
+    color: $footer-text-color;
+    transition: 0.3s all;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0.0625rem solid $footer-text-color;
+      transition: 1s all;
+    }
+    &:hover {
+      color: $text-color;
+    }
+    &:hover::before {
+      border-color: $text-hover-color;
+      transform: rotate(360deg);
+    }
+  }
+
+  .nabthat {
+    position: relative;
+    color: $footer-text-color;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 0;
+      transform: translate(-2.7rem, -50%);
+      height: 0.0625rem;
+      width: 2.5rem;
+      background: $footer-text-color;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      right: 0;
+      transform: translate(2.7rem, -50%);
+      height: 0.0625rem;
+      width: 2.5rem;
+      background: $footer-text-color;
+    }
+  }
+
+  .toggle-button {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 3.5rem;
+    font-weight: 600;
+    border: 0.0625rem solid $footer-button-border-color;
+    border-radius: 0.125rem;
+    color: $footer-button-text-color;
+    background: $footer-background-color;
+    transition: 0.3s all;
+    cursor: pointer;
+
+    i {
+      margin-left: 0.625rem;
+      transition: 0.3s all;
+    }
+    &:hover {
+      color: $text-color;
+      border-color: $text-color;
+      i {
+        color: $text-color;
+      }
+    }
+    &:focus,
+    &:active,
+    &:target {
+      color: $text-color;
+      border-color: $text-color;
+      i {
+        color: $text-color;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .toggle-frame {
+    position: absolute;
+    bottom: -100%;
+    right: 1.875rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.125rem;
+    background: $text-color;
+    box-shadow: 8px 8px 24px 0px #18191d;
+    transition: 0.3s all;
+    .options {
+      background: none;
+      border: none;
+      transition: 0.3s all;
+      cursor: pointer;
+      i {
+        margin-right: 0.625rem;
+      }
+      &:hover {
+        color: $text-hover-color;
+      }
+    }
+  }
+}
+
+.toggle-button:focus + .toggle-frame,
+.toggle-frame:focus-within {
+  bottom: 7.125rem;
+}
