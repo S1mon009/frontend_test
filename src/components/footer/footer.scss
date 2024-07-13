@@ -1,6 +1,7 @@
 @import "../../scss/colors";
+@import "../../scss/media-queries";
 
-footer {
+.footer {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -11,36 +12,58 @@ footer {
   min-height: 5rem;
   padding: 1rem 1.875rem;
   background: $footer-background-color;
+  z-index: 1;
 
-  .css-is-awesome {
+  &__css-is-awesome {
     position: relative;
     width: 4.1rem;
     padding: 0.5rem;
     color: $footer-text-color;
-    transition: 0.3s all;
+    transition: 1s all;
     cursor: pointer;
+
     &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: calc(100% + 0.0625rem);
+      height: calc(100% + 0.0625rem);
+      transform: translate(0.0313rem, 0.0313rem);
+      background: $footer-text-color;
+      transition: 1s all;
+      z-index: -1;
+    }
+    &::after {
       position: absolute;
       content: "";
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      border: 0.0625rem solid $footer-text-color;
+      transform: translate(0.0625rem, 0.0625rem);
+      background: $footer-background-color;
       transition: 1s all;
+      z-index: -1;
     }
+
     &:hover {
       color: $text-color;
     }
+
     &:hover::before {
-      border-color: $text-hover-color;
-      transform: rotate(360deg);
+      transform: translate(0.0313rem, 0.0313rem) rotate(360deg);
+      background: $hover-color;
+    }
+    &:hover::after {
+      transform: translate(0.0625rem, 0.0625rem) rotate(360deg);
     }
   }
 
-  .nabthat {
+  &__nabthat {
     position: relative;
     color: $footer-text-color;
+
     &::before {
       position: absolute;
       content: "";
@@ -51,6 +74,7 @@ footer {
       width: 2.5rem;
       background: $footer-text-color;
     }
+
     &::after {
       position: absolute;
       content: "";
@@ -63,14 +87,14 @@ footer {
     }
   }
 
-  .toggle-button {
+  &__toggle-button {
     display: flex;
     align-items: center;
     padding: 0.5rem 3.5rem;
     font-weight: 600;
-    border: 0.0625rem solid $footer-button-border-color;
+    border: 0.0625rem solid $footer-toggle-button-border-color;
     border-radius: 0.125rem;
-    color: $footer-button-text-color;
+    color: $footer-toggle-button-text-color;
     background: $footer-background-color;
     transition: 0.3s all;
     cursor: pointer;
@@ -79,18 +103,22 @@ footer {
       margin-left: 0.625rem;
       transition: 0.3s all;
     }
+
     &:hover {
       color: $text-color;
       border-color: $text-color;
+
       i {
         color: $text-color;
       }
     }
+
     &:focus,
     &:active,
     &:target {
       color: $text-color;
       border-color: $text-color;
+
       i {
         color: $text-color;
         transform: rotate(180deg);
@@ -98,7 +126,7 @@ footer {
     }
   }
 
-  .toggle-frame {
+  &__toggle-frame {
     position: absolute;
     bottom: -100%;
     right: 1.875rem;
@@ -107,22 +135,35 @@ footer {
     background: $text-color;
     box-shadow: 8px 8px 24px 0px #18191d;
     transition: 0.3s all;
-    .options {
+
+    &__options {
       background: none;
       border: none;
       transition: 0.3s all;
       cursor: pointer;
+
       i {
         margin-right: 0.625rem;
       }
+
       &:hover {
-        color: $text-hover-color;
+        background: $hover-color;
+        background-clip: text;
+        color: transparent;
       }
     }
   }
 }
 
-.toggle-button:focus + .toggle-frame,
-.toggle-frame:focus-within {
+.footer__toggle-button:focus + .footer__toggle-frame,
+.footer__toggle-frame:focus-within {
   bottom: 7.125rem;
+}
+
+@include media-query("large") {
+  .footer {
+    &__nabthat {
+      display: none;
+    }
+  }
 }

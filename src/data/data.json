@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Wprowadzenie do React: Podstawy i Praktyczne Porady",
+    "content": "React to popularna biblioteka JavaScript do tworzenia interfejsów użytkownika. Zaczynając od komponentów, możesz łatwo tworzyć złożone aplikacje front-end."
+  },
+  {
+    "id": 2,
+    "title": "Zaawansowane techniki CSS: Flexbox i układ siatki",
+    "content": "Flexbox i Grid to potężne narzędzia CSS do układania elementów na stronie. Flexbox, skrót od Elastic Box Layout, jest przeznaczony do układów jednowymiarowych, dzięki czemu idealnie nadaje się do układania elementów w rzędach lub kolumnach. Z drugiej strony CSS Grid Layout doskonale radzi sobie z tworzeniem dwuwymiarowych układów, umożliwiając projektowanie złożonych struktury oparte zarówno na wierszach, jak i kolumnach."
+  },
+  {
+    "id": 3,
+    "title": "Jak efektywnie zarządzać stanem w aplikacjach front-endowych",
+    "content": "Zarządzanie stanem jest kluczowym aspektem budowania nowoczesnych aplikacji. Jednym z najpopularniejszych sposobów jest użycie Redux, Context API i MobX."
+  },
+  {
+    "id": 4,
+    "title": "Optymalizacja wydajności: najlepsze praktyki",
+    "content": "Wydajność ma znaczący wpływ na doświadczenie użytkownika. Najlepsze praktyki optymalizują kod JavaScript, minimalizują zasoby i skracają czas ładowania strony."
+  },
+  {
+    "id": 5,
+    "title": "Długie tytuły artykułów mogą poprawić SEO i przyciągnąć więcej użytkowników",
+    "content": "Długość tytułów ma znaczenie w SEO. Długie, ale precyzyjne tytuły mogą lepiej wpływać na algorytmy wyszukiwarek i zwiększać zaangażowanie użytkowników."
+  },
+  {
+    "id": 6,
+    "title": "Testowanie front-endu: narzędzia i techniki",
+    "content": "Testowanie jest kluczowym elementem zapewnienia jakości w projektach front-endowych. Popularnymi narzędziami są Jest, Cypress, Vitest i inne, które pomagają w pisaniu rzetelnych testów."
+  }
+]

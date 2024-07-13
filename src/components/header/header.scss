@@ -1,6 +1,6 @@
 @import "../../scss/colors";
 
-header {
+.header {
   position: fixed;
   inset: 0 0;
   display: flex;
@@ -11,27 +11,38 @@ header {
   padding: 0 1.875rem;
   color: $text-color;
   background: $header-background-color;
+  z-index: 1;
 
-  .html-icon-box {
+  &__icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 3.5rem;
     aspect-ratio: 1/1;
     padding: 0.625rem;
     border-radius: 50%;
     background: $html-icon-background-color;
+    transition: 0.3s all;
     cursor: pointer;
     &:hover {
-      background: $hover-color;
+      background-color: $hover-color-main;
+      background-color: $hover-color;
     }
-    img {
-      height: 100%;
+
+    &__icon {
+      font-size: 2.1875rem;
+      color: $html-icon-color;
     }
   }
 
-  .recruitment-task {
+  &__task {
     font-size: 1.5625rem;
     text-align: right;
-    span {
-      font-weight: bolder;
+
+    &-title {
+      &--font-bolder {
+        font-weight: bolder;
+      }
     }
   }
 }

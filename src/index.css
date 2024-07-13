@@ -1,7 +1,11 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  display: flex;
-  place-items: center;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 8rem 0 8rem 0;
   min-width: 320px;
   min-height: 100vh;
   background: #2a2d36;

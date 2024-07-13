@@ -2,25 +2,39 @@ import "./footer.scss";
 
 const Footer = ({ handleShowName }) => {
   return (
-    <footer>
-      <div className="css-is-awesome">
-        <span>CSS</span>
+    <footer className="footer">
+      <div className="footer__css-is-awesome">
+        <span className="footer__css-is-awesome__line">CSS</span>
         <br />
-        <span>IS</span>
+        <span className="footer__css-is-awesome__line">IS</span>
         <br />
-        <span>AWESOME</span>
+        <span className="footer__css-is-awesome__line">AWESOME</span>
       </div>
-      <div className="nabthat">nabthat</div>
-      <button className="toggle-button">
-        Pokaż <i className="fas fa-chevron-up"></i>
+      <div className="footer__nabthat">nabthat</div>
+      <button className="footer__toggle-button">
+        Pokaż{" "}
+        <i
+          className="fas fa-chevron-up"
+          aria-hidden="true"
+          aria-label="Pokaż"
+        />
       </button>
-      <div className="toggle-frame">
-        <button className="options">
-          <i className="fas fa-chevron-right"></i> ZRESETUJ USTAWIENIA
+      <div className="footer__toggle-frame">
+        <button
+          className="footer__toggle-frame__options"
+          aria-label="Zresetuj ustawienia"
+        >
+          <i className="fas fa-chevron-right" aria-hidden="true" /> ZRESETUJ
+          USTAWIENIA
         </button>
         <br />
-        <button className="options" onClick={handleShowName}>
-          <i className="fas fa-chevron-right"></i> POKAŻ DANE OSOBOWE
+        <button
+          className="footer__toggle-frame__options"
+          onClick={handleShowName}
+          aria-label="Pokaż dane osobowe"
+        >
+          <i className="fas fa-chevron-right" aria-hidden="true" /> POKAŻ DANE
+          OSOBOWE
         </button>
       </div>
     </footer>

@@ -1,5 +1,10 @@
+import { useLoaderData } from "react-router-dom";
+import Main from "../components/main/main";
+
 const Home = () => {
-  return <p>Home</p>;
+  const data = useLoaderData();
+
+  return <Main data={data} />;
 };
 
 export default Home;

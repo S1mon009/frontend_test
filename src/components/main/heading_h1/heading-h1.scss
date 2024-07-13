@@ -1,0 +1,19 @@
+@import "../../../scss/colors";
+
+.heading__title {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0.9375rem);
+    width: 10rem;
+    height: 0.0625rem;
+    background: $text-color;
+  }
+}

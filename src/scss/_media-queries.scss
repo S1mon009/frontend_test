@@ -1,0 +1,14 @@
+$breakpoints: (
+  "large": 60rem,
+);
+
+@mixin media-query($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+    @media (max-width: #{$value}) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}'doesn't exist in map of \$breakpoints.";
+  }
+}
