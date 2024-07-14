@@ -1,4 +1,5 @@
 @import "../../scss/colors";
+@import "../../scss/media-queries";
 
 .header {
   position: fixed;
@@ -11,7 +12,7 @@
   padding: 0 1.875rem;
   color: $text-color;
   background: $header-background-color;
-  z-index: 0;
+  z-index: 1;
 
   &__icon-box {
     display: flex;
@@ -44,6 +45,14 @@
       &--font-bolder {
         font-weight: bolder;
       }
+    }
+  }
+}
+
+@include media-query("large") {
+  .header {
+    &__task {
+      font-size: 1rem;
     }
   }
 }

@@ -3,6 +3,7 @@ import "./footer.scss";
 
 const Footer = ({ handleShowName }) => {
   const navigate = useNavigate();
+
   return (
     <footer className="footer">
       <div className="footer__css-is-awesome">
@@ -13,7 +14,11 @@ const Footer = ({ handleShowName }) => {
         <span className="footer__css-is-awesome__line">AWESOME</span>
       </div>
       <div className="footer__nabthat">nabthat</div>
-      <button className="footer__toggle-button">
+      <button
+        className="footer__toggle-button"
+        aria-expanded="false"
+        aria-controls="toggle-frame"
+      >
         Pokaż{" "}
         <i
           className="fas fa-chevron-up"
@@ -27,8 +32,12 @@ const Footer = ({ handleShowName }) => {
           aria-label="Zresetuj ustawienia"
           onClick={() => navigate(0)}
         >
-          <i className="fas fa-chevron-right" aria-hidden="true" /> ZRESETUJ
-          USTAWIENIA
+          <i
+            className="fas fa-chevron-right"
+            aria-hidden="true"
+            aria-label="Zresetuj ustawienia"
+          />{" "}
+          ZRESETUJ USTAWIENIA
         </button>
         <br />
         <button

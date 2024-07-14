@@ -1,4 +1,5 @@
 @import "../../../../scss/colors";
+@import "../../../../scss/media-queries";
 
 .second-block {
   &__heading {
@@ -30,6 +31,15 @@
         background-color: $hover-color-main;
         background-color: $hover-color;
       }
+    }
+  }
+}
+
+@include media-query("large") {
+  .second-block {
+    &__heading {
+      text-align: right;
+      margin-bottom: 1.875rem;
     }
   }
 }

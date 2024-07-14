@@ -30,8 +30,8 @@ const Dialog = ({ show, hide, handleSubmit, data }) => {
       className={`dialog ${show ? "dialog--visible" : "dialog--hidden"}`}
       role="dialog"
       aria-modal="true"
-      aria-labelledby="dialogTitle"
-      aria-describedby="dialogDescription"
+      aria-labelledby="dialogFormularza"
+      aria-describedby="dialogWyświetlajacyFormularzDoEdycjiIDodawaniaDanych"
     >
       <form className="dialog__form" onSubmit={handleSubmit}>
         <input
@@ -44,7 +44,7 @@ const Dialog = ({ show, hide, handleSubmit, data }) => {
         <button
           type="button"
           className="dialog__form__close"
-          aria-label="Close"
+          aria-label="Zamknij"
           onClick={hide}
         >
           <i className="fa-solid fa-xmark" />
@@ -58,6 +58,7 @@ const Dialog = ({ show, hide, handleSubmit, data }) => {
             id="title"
             value={formData.title}
             onChange={handleChange}
+            aria-describedby="poleFormularzaTytul"
           />
         </div>
         <br />
@@ -69,6 +70,7 @@ const Dialog = ({ show, hide, handleSubmit, data }) => {
             id="content"
             value={formData.content}
             onChange={handleChange}
+            aria-describedby="poleFormularzaTresc"
           />
         </div>
         <button type="submit" className="dialog__form__submit">

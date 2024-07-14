@@ -1,13 +1,19 @@
 @import "../../scss/colors";
+@import "../../scss/media-queries";
 
 .main-content {
   color: $text-color;
   padding: 0.625rem 2.5rem;
 
   &__blocks {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20.3125rem, 1fr));
     margin-top: 5rem;
-    gap: 1.875rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.25rem 2.5rem;
+
+    & > * {
+      flex: 1 0 150px;
+    }
   }
 }
