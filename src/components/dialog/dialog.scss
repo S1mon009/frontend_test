@@ -1,0 +1,81 @@
+@import "../../scss/colors";
+
+.dialog {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: $dialog-background-color;
+  z-index: 3;
+
+  &--visible {
+    display: block;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28.125rem;
+    padding: 2.5rem 1.25rem 1.25rem 1.25rem;
+    border: 0.0625rem solid $footer-toggle-button-border-color;
+    border-radius: 0.625rem;
+    background: $header-background-color;
+
+    &__close {
+      position: absolute;
+      top: 0.625rem;
+      right: 0.625rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: $text-color;
+
+      i {
+        display: block;
+      }
+    }
+
+    &__input {
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.625rem;
+        margin-top: 0.625rem;
+        border: 0.0625rem solid $footer-toggle-button-border-color;
+        border-radius: 0.125rem;
+        background: transparent;
+        color: $text-color;
+      }
+      textarea {
+        height: 9.375rem;
+      }
+    }
+
+    &__submit {
+      display: block;
+      width: 100%;
+      padding: 0.625rem;
+      margin-top: 1.25rem;
+      border: 0.0625rem solid $footer-toggle-button-border-color;
+      border-radius: 0.125rem;
+      color: $text-color;
+      background-color: $main-background-color;
+      transition: 0.3s all;
+      cursor: pointer;
+      &:hover {
+        background-color: $hover-color-main;
+        background-color: $hover-color;
+      }
+    }
+  }
+}

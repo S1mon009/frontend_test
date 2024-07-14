@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import "./footer.scss";
 
 const Footer = ({ handleShowName }) => {
+  const navigate = useNavigate();
   return (
     <footer className="footer">
       <div className="footer__css-is-awesome">
@@ -23,6 +25,7 @@ const Footer = ({ handleShowName }) => {
         <button
           className="footer__toggle-frame__options"
           aria-label="Zresetuj ustawienia"
+          onClick={() => navigate(0)}
         >
           <i className="fas fa-chevron-right" aria-hidden="true" /> ZRESETUJ
           USTAWIENIA

@@ -1,8 +1,8 @@
 import "./first-block.scss";
 
-const FirstBlock = ({ handleChangeCurrentContent }) => {
+const FirstBlock = ({ handleRadioButton }) => {
   function handleFormChange(formData) {
-    handleChangeCurrentContent(formData.target.value);
+    handleRadioButton(formData.target.value);
   }
 
   return (

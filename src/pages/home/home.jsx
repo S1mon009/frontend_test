@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import Main from "../components/main/main";
+import Main from "../../components/main/main";
 
 const Home = () => {
   const data = useLoaderData();

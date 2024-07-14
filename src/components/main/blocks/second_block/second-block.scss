@@ -9,8 +9,12 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+    gap: 1.25rem 2.5rem;
 
     &__button {
+      flex: 1 0 1.875rem;
       padding: 0.5rem 3.5rem;
       font-weight: 600;
       border: 0.0625rem solid $second-block__buttons__button-border-color;
