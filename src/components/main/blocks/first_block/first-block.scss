@@ -46,6 +46,7 @@
 
 @include media-query("large") {
   .first-block {
+    width: 50%;
     &__heading {
       text-align: left;
       margin-bottom: 1.875rem;

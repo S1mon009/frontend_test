@@ -17,3 +17,11 @@
     }
   }
 }
+
+@include media-query("large") {
+  .main-content {
+    &__blocks {
+      gap: 2px 2px;
+    }
+  }
+}
